@@ -141,10 +141,14 @@ const renderRecipe = function (recipe) {
 // Show Recipe
 const showRecipe = async function (id) {
   try {
+    const recipeId = window.location.hash.slice(1);
+
+    if (!recipeId) return;
+
     renderSpinner(recipeContainer);
 
     const response = await fetch(
-      `https://forkify-api.jonas.io/api/v2/recipes/${id}`
+      `https://forkify-api.jonas.io/api/v2/recipes/${recipeId}`
     );
 
     const data = await response.json();
@@ -170,4 +174,9 @@ const showRecipe = async function (id) {
   }
 };
 
-showRecipe('5ed6604591c37cdc054bc886');
+// Add Event Listeners to Multiple Events
+['hashchange', 'load'].forEach(element =>
+  window.addEventListener(element, showRecipe)
+);
+// window.addEventListener('hashchange', showRecipe);
+// window.addEventListener('load', showRecipe);
