@@ -597,8 +597,7 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 
 },{}],"aenu9":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-var _webImmediateJs = require("core-js/modules/web.immediate.js"); // window.addEventListener('hashchange', controlRecipes);
- // window.addEventListener('load', controlRecipes);
+var _webImmediateJs = require("core-js/modules/web.immediate.js");
 var _runtime = require("regenerator-runtime/runtime");
 var _model = require("./model");
 var _recipeView = require("./views/recipeView");
@@ -614,14 +613,13 @@ const controlRecipes = async function() {
         await _model.loadRecipe(recipeId);
         (0, _recipeViewDefault.default).render(_model.state.recipe);
     } catch (error) {
-        console.error(error.message);
+        (0, _recipeViewDefault.default).renderError();
     }
 };
-// Add Event Listeners to Multiple Events
-[
-    'hashchange',
-    'load'
-].forEach((element)=>window.addEventListener(element, controlRecipes));
+const init = function() {
+    (0, _recipeViewDefault.default).addHandlerRender(controlRecipes);
+};
+init();
 
 },{"core-js/modules/web.immediate.js":"49tUX","regenerator-runtime/runtime":"dXNgZ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./model":"Y4A21","./views/recipeView":"l60JC"}],"49tUX":[function(require,module,exports,__globalThis) {
 'use strict';
@@ -2516,7 +2514,7 @@ const loadRecipe = async function(recipeId) {
             ingredients: recipe.ingredients
         };
     } catch (error) {
-        console.error(`My Error: ${error}`);
+        throw error;
     }
 };
 
@@ -2563,6 +2561,8 @@ var _fractional = require("fractional");
 class RecipeView {
     #parentElement = document.querySelector('.recipe');
     #data;
+    #errorMessage = `We couldn't find that recipe. Please try another one!`;
+    #message = '';
     render(data) {
         this.#data = data;
         const recipeMarkup = this.#generateMarkup();
@@ -2676,6 +2676,41 @@ class RecipeView {
                 ${ing.description}
               </div>
             </li>`;
+    }
+    renderError(message = this.#errorMessage) {
+        const errorMarkup = `
+    <div class="error">
+            <div>
+              <svg>
+                <use href="${(0, _iconsSvgDefault.default)}#icon-alert-triangle"></use>
+              </svg>
+            </div>
+            <p>${message}</p>
+          </div>`;
+        this.#clear();
+        this.#parentElement.insertAdjacentHTML('afterbegin', errorMarkup);
+    }
+    renderMessage(message = this.#message) {
+        const errorMarkup = `
+    <div class="message">
+            <div>
+              <svg>
+                <use href="${(0, _iconsSvgDefault.default)}#icon-smile"></use>
+              </svg>
+            </div>
+            <p>${message}</p>
+          </div>`;
+        this.#clear();
+        this.#parentElement.insertAdjacentHTML('afterbegin', errorMarkup);
+    }
+    addHandlerRender(handler) {
+        // Add Event Listeners to Multiple Events
+        [
+            'hashchange',
+            'load'
+        ].forEach((element)=>window.addEventListener(element, handler));
+    // window.addEventListener('hashchange', controlRecipes);
+    // window.addEventListener('load', controlRecipes);
     }
 }
 exports.default = new RecipeView();

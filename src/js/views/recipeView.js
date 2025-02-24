@@ -4,6 +4,8 @@ import { Fraction } from 'fractional';
 class RecipeView {
   #parentElement = document.querySelector('.recipe');
   #data;
+  #errorMessage = `We couldn't find that recipe. Please try another one!`;
+  #message = '';
 
   render(data) {
     this.#data = data;
@@ -132,6 +134,42 @@ class RecipeView {
                 ${ing.description}
               </div>
             </li>`;
+  }
+
+  renderError(message = this.#errorMessage) {
+    const errorMarkup = `
+    <div class="error">
+            <div>
+              <svg>
+                <use href="${icons}#icon-alert-triangle"></use>
+              </svg>
+            </div>
+            <p>${message}</p>
+          </div>`;
+    this.#clear();
+    this.#parentElement.insertAdjacentHTML('afterbegin', errorMarkup);
+  }
+
+  renderMessage(message = this.#message) {
+    const errorMarkup = `
+    <div class="message">
+            <div>
+              <svg>
+                <use href="${icons}#icon-smile"></use>
+              </svg>
+            </div>
+            <p>${message}</p>
+          </div>`;
+    this.#clear();
+    this.#parentElement.insertAdjacentHTML('afterbegin', errorMarkup);
+  }
+  addHandlerRender(handler) {
+    // Add Event Listeners to Multiple Events
+    ['hashchange', 'load'].forEach(element =>
+      window.addEventListener(element, handler)
+    );
+    // window.addEventListener('hashchange', controlRecipes);
+    // window.addEventListener('load', controlRecipes);
   }
 }
 

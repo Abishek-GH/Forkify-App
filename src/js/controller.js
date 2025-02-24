@@ -2,6 +2,7 @@ import 'regenerator-runtime/runtime';
 import 'core-js/stable';
 import * as model from './model';
 import RecipeView from './views/recipeView';
+import recipeView from './views/recipeView';
 // https://forkify-api.herokuapp.com/v2
 
 ///////////////////////////////////////
@@ -19,13 +20,11 @@ const controlRecipes = async function () {
 
     RecipeView.render(model.state.recipe);
   } catch (error) {
-    console.error(error.message);
+    RecipeView.renderError();
   }
 };
 
-// Add Event Listeners to Multiple Events
-['hashchange', 'load'].forEach(element =>
-  window.addEventListener(element, controlRecipes)
-);
-// window.addEventListener('hashchange', controlRecipes);
-// window.addEventListener('load', controlRecipes);
+const init = function () {
+  RecipeView.addHandlerRender(controlRecipes);
+};
+init();
