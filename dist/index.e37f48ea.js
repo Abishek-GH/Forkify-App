@@ -602,6 +602,8 @@ var _runtime = require("regenerator-runtime/runtime");
 var _model = require("./model");
 var _recipeView = require("./views/recipeView");
 var _recipeViewDefault = parcelHelpers.interopDefault(_recipeView);
+var _searchView = require("./views/searchView");
+var _searchViewDefault = parcelHelpers.interopDefault(_searchView);
 // https://forkify-api.herokuapp.com/v2
 ///////////////////////////////////////
 // Show Recipe
@@ -616,12 +618,22 @@ const controlRecipes = async function() {
         (0, _recipeViewDefault.default).renderError();
     }
 };
+const controlSearchResults = async function() {
+    try {
+        const query = (0, _searchViewDefault.default).getQuery();
+        if (!query) return;
+        await _model.loadSearchResults(query);
+    } catch (error) {
+        (0, _recipeViewDefault.default).renderError();
+    }
+};
 const init = function() {
     (0, _recipeViewDefault.default).addHandlerRender(controlRecipes);
+    (0, _searchViewDefault.default).addHandlerSearch(controlSearchResults);
 };
 init();
 
-},{"core-js/modules/web.immediate.js":"49tUX","regenerator-runtime/runtime":"dXNgZ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./model":"Y4A21","./views/recipeView":"l60JC"}],"49tUX":[function(require,module,exports,__globalThis) {
+},{"core-js/modules/web.immediate.js":"49tUX","regenerator-runtime/runtime":"dXNgZ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./model":"Y4A21","./views/recipeView":"l60JC","./views/searchView":"9OQAM"}],"49tUX":[function(require,module,exports,__globalThis) {
 'use strict';
 // TODO: Remove this module from `core-js@4` since it's split to modules listed below
 require("52e9b3eefbbce1ed");
@@ -2494,10 +2506,15 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "state", ()=>state);
 parcelHelpers.export(exports, "loadRecipe", ()=>loadRecipe);
+parcelHelpers.export(exports, "loadSearchResults", ()=>loadSearchResults);
 var _config = require("./config");
 var _helper = require("./helper");
 const state = {
-    recipe: {}
+    recipe: {},
+    search: {
+        query: '',
+        results: []
+    }
 };
 const loadRecipe = async function(recipeId) {
     try {
@@ -2513,6 +2530,22 @@ const loadRecipe = async function(recipeId) {
             cookingTime: recipe.cooking_time,
             ingredients: recipe.ingredients
         };
+    } catch (error) {
+        throw error;
+    }
+};
+const loadSearchResults = async function(query) {
+    try {
+        state.search.query = query;
+        const data = await (0, _helper.getJSON)(`${(0, _config.API_URL)}/?search=${query}`);
+        state.search.results = data.data.recipes.map((record)=>{
+            return {
+                id: record.id,
+                title: record.title,
+                publisher: record.publisher,
+                image: record.image_url
+            };
+        });
     } catch (error) {
         throw error;
     }
@@ -3006,6 +3039,28 @@ Fraction.primeFactors = function(n) {
 };
 module.exports.Fraction = Fraction;
 
-},{}]},["ik2hV","aenu9"], "aenu9", "parcelRequire94c2")
+},{}],"9OQAM":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+class SearchView {
+    #parentElement = document.querySelector('.search');
+    getQuery() {
+        const query = this.#parentElement.querySelector('.search__field').value;
+        this.#clearInput();
+        return query;
+    }
+    #clearInput() {
+        this.#parentElement.querySelector('.search__field').value = '';
+    }
+    addHandlerSearch(handler) {
+        this.#parentElement.addEventListener('submit', function(event) {
+            event.preventDefault();
+            handler();
+        });
+    }
+}
+exports.default = new SearchView();
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["ik2hV","aenu9"], "aenu9", "parcelRequire94c2")
 
 //# sourceMappingURL=index.e37f48ea.js.map
