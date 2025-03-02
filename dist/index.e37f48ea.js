@@ -617,6 +617,7 @@ const controlRecipes = async function() {
         const recipeId = window.location.hash.slice(1);
         if (!recipeId) return;
         (0, _recipeViewDefault.default).renderSpinner();
+        (0, _resultViewDefault.default).update(_model.getSearchResultsPage());
         await _model.loadRecipe(recipeId);
         (0, _recipeViewDefault.default).render(_model.state.recipe);
     } catch (error) {
@@ -643,7 +644,8 @@ const controlPagination = function(goToPage) {
 };
 const controlServings = function(newServings) {
     _model.updateServings(newServings);
-    (0, _recipeViewDefault.default).render(_model.state.recipe);
+    // RecipeView.render(model.state.recipe);
+    (0, _recipeViewDefault.default).update(_model.state.recipe);
 };
 const init = function() {
     (0, _recipeViewDefault.default).addHandlerRender(controlRecipes);
@@ -3058,6 +3060,18 @@ class View {
     _clear() {
         this._parentElement.innerHTML = '';
     }
+    update(data) {
+        this._data = data;
+        const newMarkup = this._generateMarkup();
+        const newDOM = document.createRange().createContextualFragment(newMarkup);
+        const newElements = Array.from(newDOM.querySelectorAll('*'));
+        const currentElements = Array.from(this._parentElement.querySelectorAll('*'));
+        newElements.forEach((newEl, i)=>{
+            const curEl = currentElements[i];
+            if (!newEl.isEqualNode(curEl) && newEl.firstChild.nodeValue.trim() !== '') curEl.textContent = newEl.textContent;
+            if (!newEl.isEqualNode(curEl)) Array.from(newEl.attributes).forEach((attr)=>curEl.setAttribute(attr.name, attr.value));
+        });
+    }
     renderSpinner() {
         const spinnerMarkup = `
             <div class="spinner">
@@ -3130,16 +3144,14 @@ class ResultsView extends (0, _viewDefault.default) {
     _parentElement = document.querySelector('.results');
     _errorMessage = `No recipes found for your query. Please try again!`;
     _message = '';
-    // _generateMarkup() {
-    //   return this._data.map(this._generateMarkupPreview).join('');
-    // }
     _generateMarkup() {
         return this._data.map((result)=>this._generateMarkupPreview(result)).join('');
     }
     _generateMarkupPreview(result) {
+        const id = window.location.hash.slice(1);
         return `
       <li class="preview">
-          <a class="preview__link" href="#${result.id}">
+          <a class="preview__link ${result.id === id ? 'preview__link--active' : ''}" href="#${result.id}">
               <figure class="preview__fig">
                   <img src="${result.image}" alt="${result.title}" />
               </figure>
