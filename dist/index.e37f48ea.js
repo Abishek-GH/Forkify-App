@@ -628,7 +628,7 @@ const controlSearchResults = async function() {
         const query = (0, _searchViewDefault.default).getQuery();
         if (!query) return;
         await _model.loadSearchResults(query);
-        (0, _resultViewDefault.default).render(_model.state.search);
+        (0, _resultViewDefault.default).render(_model.getSearchResultsPage(1));
     } catch (error) {
         console.error('Controller:', error);
         (0, _recipeViewDefault.default).renderError();
@@ -2514,13 +2514,16 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "state", ()=>state);
 parcelHelpers.export(exports, "loadRecipe", ()=>loadRecipe);
 parcelHelpers.export(exports, "loadSearchResults", ()=>loadSearchResults);
+parcelHelpers.export(exports, "getSearchResultsPage", ()=>getSearchResultsPage);
 var _config = require("./config");
 var _helper = require("./helper");
 const state = {
     recipe: {},
     search: {
         query: '',
-        results: []
+        results: [],
+        page: 1,
+        resultsPerPage: (0, _config.RES_PER_PAGE)
     }
 };
 const loadRecipe = async function(recipeId) {
@@ -2557,14 +2560,22 @@ const loadSearchResults = async function(query) {
         throw error;
     }
 };
+const getSearchResultsPage = function(page = state.search.page) {
+    state.search.page = page;
+    const start = (page - 1) * state.search.resultsPerPage;
+    const end = page * state.search.resultsPerPage;
+    return state.search.results.slice(start, end);
+};
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./config":"k5Hzs","./helper":"lVRAz"}],"k5Hzs":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "API_URL", ()=>API_URL);
 parcelHelpers.export(exports, "TIMEOUT_SEC", ()=>TIMEOUT_SEC);
+parcelHelpers.export(exports, "RES_PER_PAGE", ()=>RES_PER_PAGE);
 const API_URL = 'https://forkify-api.jonas.io/api/v2/recipes';
 const TIMEOUT_SEC = 10;
+const RES_PER_PAGE = 10;
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lVRAz":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -3010,7 +3021,7 @@ var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
 class View {
     _data;
     render(data) {
-        if (!data.results || Array.isArray(data.results) && data.results.length === 0) return this.renderError();
+        if (!data || Array.isArray(data) && data.length === 0) return this.renderError();
         this._data = data;
         const recipeMarkup = this._generateMarkup();
         this._clear();
@@ -3091,23 +3102,26 @@ class ResultsView extends (0, _viewDefault.default) {
     _parentElement = document.querySelector('.results');
     _errorMessage = `No recipes found for your query. Please try again!`;
     _message = '';
+    // _generateMarkup() {
+    //   return this._data.map(this._generateMarkupPreview).join('');
+    // }
     _generateMarkup() {
-        return this._data.results.map(this._generateMarkupPreview).join('');
+        return this._data.map((result)=>this._generateMarkupPreview(result)).join('');
     }
     _generateMarkupPreview(result) {
         return `
-        <li class="preview">
-            <a class="preview__link" href="#${result.id}">
-                <figure class="preview__fig">
-                    <img src="${result.image}" alt="${result.title}" />
-                </figure>
-                <div class="preview__data">
-                    <h4 class="preview__title">${result.title}</h4>
-                    <p class="preview__publisher">${result.publisher}</p>
-                </div>
-            </a>
-        </li>
-    `;
+      <li class="preview">
+          <a class="preview__link" href="#${result.id}">
+              <figure class="preview__fig">
+                  <img src="${result.image}" alt="${result.title}" />
+              </figure>
+              <div class="preview__data">
+                  <h4 class="preview__title">${result.title}</h4>
+                  <p class="preview__publisher">${result.publisher}</p>
+              </div>
+          </a>
+      </li>
+  `;
     }
 }
 exports.default = new ResultsView();

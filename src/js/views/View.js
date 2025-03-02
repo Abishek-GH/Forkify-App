@@ -3,10 +3,7 @@ import icons from 'url:./../../img/icons.svg';
 export default class View {
   _data;
   render(data) {
-    if (
-      !data.results ||
-      (Array.isArray(data.results) && data.results.length === 0)
-    ) {
+    if (!data || (Array.isArray(data) && data.length === 0)) {
       return this.renderError();
     }
 

@@ -38,7 +38,7 @@ const controlSearchResults = async function () {
     if (!query) return;
 
     await model.loadSearchResults(query);
-    ResultView.render(model.state.search);
+    ResultView.render(model.getSearchResultsPage(1));
   } catch (error) {
     console.error('Controller:', error);
     RecipeView.renderError();
