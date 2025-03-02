@@ -1,4 +1,4 @@
-8096
+8097
 57F:\GitHub\Projects\Forkify\node_modules\@msgpackr-extract133848868507018532 1
 62F:\GitHub\Projects\Forkify\node_modules\picomatch\package.json133842799224099042 0
 79F:\GitHub\Projects\Forkify\node_modules\core-js\modules\esnext.regexp.escape.js133842845612071541 0
@@ -51,7 +51,7 @@
 87F:\GitHub\Projects\Forkify\node_modules\@parcel\transformer-sass\lib\SassTransformer.js133842799672133069 0
 77F:\GitHub\Projects\Forkify\node_modules\core-js\stable\array\virtual\every.js133842845613667194 0
 91F:\GitHub\Projects\Forkify\node_modules\@swc\helpers\cjs\_iterable_to_array_limit_loose.cjs133842799229023232 0
-31F:\GitHub\Projects\Forkify\dist133853880530324404 1
+31F:\GitHub\Projects\Forkify\dist133853972987483821 1
 71F:\GitHub\Projects\Forkify\node_modules\caniuse-lite\data\regions\KN.js133842799237526698 0
 96F:\GitHub\Projects\Forkify\node_modules\core-js\internals\typed-array-from-same-type-and-list.js133842845646814641 0
 75F:\GitHub\Projects\Forkify\node_modules\core-js\stable\instance\flat-map.js133842845616759839 0
@@ -94,7 +94,7 @@
 84F:\GitHub\Projects\Forkify\node_modules\utility-types\dist\aliases-and-guards.js.map133842799223798903 0
 90F:\GitHub\Projects\Forkify\node_modules\posthtml\node_modules\entities\lib\encode.d.ts.map133842799226348148 0
 68F:\GitHub\Projects\Forkify\node_modules\sass\types\logger\index.d.ts133842799659436175 0
-47F:\GitHub\Projects\Forkify\src\js\controller.js133853879906560691 0
+47F:\GitHub\Projects\Forkify\src\js\controller.js133853971070173678 0
 57F:\GitHub\Projects\Forkify\node_modules\semver\preload.js133842799227656221 0
 80F:\GitHub\Projects\Forkify\node_modules\core-js\modules\esnext.symbol.matcher.js133842845612700781 0
 91F:\GitHub\Projects\Forkify\node_modules\caniuse-lite\data\features\constraint-validation.js133842799231129233 0
@@ -183,21 +183,7 @@
 78F:\GitHub\Projects\Forkify\node_modules\core-js\features\array\virtual\join.js133842845628546402 0
 67F:\GitHub\Projects\Forkify\node_modules\core-js\stable\map\index.js133842845624816938 0
 75F:\GitHub\Projects\Forkify\node_modules\type-fest\source\tsconfig-json.d.ts133842799227967449 0
-39F:\GitHub\Projects\Forkify\src\js\views133853845021526782 1
-69F:\GitHub\Projects\Forkify\node_modules\core-js\full\function\virtual133842845647262443 1
-79F:\GitHub\Projects\Forkify\node_modules\core-js\stable\string\virtual\strike.js133842845640793421 0
-74F:\GitHub\Projects\Forkify\node_modules\htmlparser2\lib\esm\index.d.ts.map133842799225391590 0
-53F:\GitHub\Projects\Forkify\src\js\views\recipeView.js133853864068612066 0
-46F:\GitHub\Projects\Forkify\node_modules\@babel133842799207121550 1
-75F:\GitHub\Projects\Forkify\node_modules\core-js\es\function\has-instance.js133842845621226441 0
-84F:\GitHub\Projects\Forkify\node_modules\posthtml\node_modules\entities\lib\generated133842799226827416 1
-53F:\GitHub\Projects\Forkify\src\js\views\resultView.js133853879130448691 0
-82F:\GitHub\Projects\Forkify\node_modules\core-js\proposals\object-values-entries.js133842845632435361 0
-57F:\GitHub\Projects\Forkify\node_modules\core-js\full\json133842845644720088 1
-82F:\GitHub\Projects\Forkify\node_modules\@swc\helpers\_\_apply_decorated_descriptor133842799232637817 1
-48F:\GitHub\Projects\Forkify\node_modules\lmdb\bin133842799231359213 1
-83F:\GitHub\Projects\Forkify\node_modules\caniuse-lite\data\features\selection-api.js133842799240552177 0
-68F:\GitHub\Projects\Forkify\node_modules\sass\types\value\string.d.ts133842799659603960 0
+39F:\GitHub\Projects\Forkify\src\js\views133853909126340603 1
 77F:\GitHub\Projects\Forkify\node_modules\@swc\helpers\cjs\_sliced_to_array.cjs133842799229665763 0
 48F:\GitHub\Projects\Forkify\node_modules\argparse133842799224197734 1
 53F:\GitHub\Projects\Forkify\src\js\views\searchView.js133853847483203681 0
@@ -209,6 +195,25 @@
 80F:\GitHub\Projects\Forkify\node_modules\posthtml\node_modules\entities\readme.md133842799226581066 0
 43F:\GitHub\Projects\Forkify\src\img\logo.png132886955210000000 0
 96F:\GitHub\Projects\Forkify\node_modules\core-js\modules\es.object.get-own-property-descriptor.js133842845607211332 0
+68F:\GitHub\Projects\Forkify\node_modules\core-js\full\string\match.js133842845631077144 0
+79F:\GitHub\Projects\Forkify\node_modules\core-js\es\array\virtual\copy-within.js133842845602186302 0
+57F:\GitHub\Projects\Forkify\src\js\views\paginationView.js133853973396576356 0
+86F:\GitHub\Projects\Forkify\node_modules\posthtml\node_modules\domutils\lib\legacy.d.ts133842799226683043 0
+65F:\GitHub\Projects\Forkify\node_modules\lmdb\dependencies\lz4\lib133842799231739107 1
+69F:\GitHub\Projects\Forkify\node_modules\core-js\full\function\virtual133842845647262443 1
+79F:\GitHub\Projects\Forkify\node_modules\core-js\stable\string\virtual\strike.js133842845640793421 0
+74F:\GitHub\Projects\Forkify\node_modules\htmlparser2\lib\esm\index.d.ts.map133842799225391590 0
+53F:\GitHub\Projects\Forkify\src\js\views\recipeView.js133853864068612066 0
+46F:\GitHub\Projects\Forkify\node_modules\@babel133842799207121550 1
+75F:\GitHub\Projects\Forkify\node_modules\core-js\es\function\has-instance.js133842845621226441 0
+84F:\GitHub\Projects\Forkify\node_modules\posthtml\node_modules\entities\lib\generated133842799226827416 1
+53F:\GitHub\Projects\Forkify\src\js\views\resultView.js133853967189278644 0
+82F:\GitHub\Projects\Forkify\node_modules\core-js\proposals\object-values-entries.js133842845632435361 0
+57F:\GitHub\Projects\Forkify\node_modules\core-js\full\json133842845644720088 1
+82F:\GitHub\Projects\Forkify\node_modules\@swc\helpers\_\_apply_decorated_descriptor133842799232637817 1
+48F:\GitHub\Projects\Forkify\node_modules\lmdb\bin133842799231359213 1
+83F:\GitHub\Projects\Forkify\node_modules\caniuse-lite\data\features\selection-api.js133842799240552177 0
+68F:\GitHub\Projects\Forkify\node_modules\sass\types\value\string.d.ts133842799659603960 0
 60F:\GitHub\Projects\Forkify\node_modules\js-yaml\CHANGELOG.md133842799227679396 0
 73F:\GitHub\Projects\Forkify\node_modules\@parcel\core\src\public\Bundle.js133842799228067791 0
 75F:\GitHub\Projects\Forkify\node_modules\core-js\actual\string\trim-right.js133842845645979983 0
@@ -278,9 +283,6 @@
 76F:\GitHub\Projects\Forkify\node_modules\core-js\features\math\rad-per-deg.js133842845634647114 0
 71F:\GitHub\Projects\Forkify\node_modules\@parcel\transformer-css\LICENSE133842799220069927 0
 73F:\GitHub\Projects\Forkify\node_modules\core-js\stable\object\group-by.js133842845620915952 0
-67F:\GitHub\Projects\Forkify\node_modules\core-js\full\number\virtual133842845643463340 1
-50F:\GitHub\Projects\Forkify\node_modules\domhandler133842799225255890 1
-73F:\GitHub\Projects\Forkify\node_modules\core-js\full\symbol\observable.js133842845632455763 0
 72F:\GitHub\Projects\Forkify\node_modules\core-js\modules\es.array.sort.js133842845605936352 0
 76F:\GitHub\Projects\Forkify\node_modules\caniuse-lite\data\features\webnfc.js133842799242772930 0
 72F:\GitHub\Projects\Forkify\node_modules\domutils\lib\esm\querying.js.map133842799228125726 0
@@ -316,7 +318,6 @@
 59F:\GitHub\Projects\Forkify\node_modules\htmlparser2\LICENSE133842799219948554 0
 66F:\GitHub\Projects\Forkify\node_modules\core-js\full\math\iaddh.js133842845621669027 0
 73F:\GitHub\Projects\Forkify\node_modules\core-js\internals\regexp-flags.js133842845635859681 0
-58F:\GitHub\Projects\Forkify\node_modules\js-tokens\index.js133842799221218131 0
 50F:\GitHub\Projects\Forkify\node_modules\color-name133842799221667035 1
 106F:\GitHub\Projects\Forkify\node_modules\posthtml\node_modules\entities\lib\generated\decode-data-html.d.ts133842799226768815 0
 99F:\GitHub\Projects\Forkify\node_modules\lmdb\dependencies\lmdb-data-v1\libraries\liblmdb\mdb_dump.1133842799226907226 0
@@ -342,6 +343,9 @@
 75F:\GitHub\Projects\Forkify\node_modules\core-js\features\queue-microtask.js133842845634577012 0
 71F:\GitHub\Projects\Forkify\node_modules\core-js\actual\string\anchor.js133842845597928510 0
 54F:\GitHub\Projects\Forkify\node_modules\domelementtype133842799223979229 1
+67F:\GitHub\Projects\Forkify\node_modules\core-js\full\number\virtual133842845643463340 1
+50F:\GitHub\Projects\Forkify\node_modules\domhandler133842799225255890 1
+73F:\GitHub\Projects\Forkify\node_modules\core-js\full\symbol\observable.js133842845632455763 0
 65F:\GitHub\Projects\Forkify\node_modules\semver\functions\clean.js133842799221402577 0
 48F:\GitHub\Projects\Forkify\node_modules\domutils133842799228662535 1
 74F:\GitHub\Projects\Forkify\node_modules\type-fest\source\set-optional.d.ts133842799227579477 0
@@ -1337,6 +1341,13 @@
 76F:\GitHub\Projects\Forkify\node_modules\core-js\modules\es.regexp.dot-all.js133842845607958904 0
 69F:\GitHub\Projects\Forkify\node_modules\core-js\full\instance\with.js133842845649301334 0
 63F:\GitHub\Projects\Forkify\node_modules\semver\functions\gte.js133842799225624791 0
+75F:\GitHub\Projects\Forkify\node_modules\core-js\full\get-iterator-method.js133842845619289086 0
+74F:\GitHub\Projects\Forkify\node_modules\core-js\features\object\entries.js133842845604797923 0
+62F:\GitHub\Projects\Forkify\node_modules\semver\functions\lt.js133842799226648616 0
+83F:\GitHub\Projects\Forkify\node_modules\@parcel\package-manager\test\fixtures\empty133842799227594501 1
+90F:\GitHub\Projects\Forkify\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\chacha8.h133842799230763692 0
+56F:\GitHub\Projects\Forkify\node_modules\entities\LICENSE133842799219948554 0
+79F:\GitHub\Projects\Forkify\node_modules\posthtml\node_modules\entities\lib\maps133842799225493723 1
 93F:\GitHub\Projects\Forkify\node_modules\posthtml\node_modules\htmlparser2\lib\Parser.d.ts.map133842799224897577 0
 71F:\GitHub\Projects\Forkify\node_modules\caniuse-lite\data\regions\SL.js133842799240757174 0
 75F:\GitHub\Projects\Forkify\node_modules\core-js\modules\es.iterator.drop.js133842845606342140 0
@@ -1345,13 +1356,6 @@
 63F:\GitHub\Projects\Forkify\node_modules\@parcel\packager-js\lib133842799226318127 1
 83F:\GitHub\Projects\Forkify\node_modules\posthtml\node_modules\domutils\lib\index.js133842799222109378 0
 81F:\GitHub\Projects\Forkify\node_modules\core-js\proposals\function-demethodize.js133842845618982285 0
-75F:\GitHub\Projects\Forkify\node_modules\core-js\full\get-iterator-method.js133842845619289086 0
-74F:\GitHub\Projects\Forkify\node_modules\core-js\features\object\entries.js133842845604797923 0
-62F:\GitHub\Projects\Forkify\node_modules\semver\functions\lt.js133842799226648616 0
-83F:\GitHub\Projects\Forkify\node_modules\@parcel\package-manager\test\fixtures\empty133842799227594501 1
-90F:\GitHub\Projects\Forkify\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\chacha8.h133842799230763692 0
-56F:\GitHub\Projects\Forkify\node_modules\entities\LICENSE133842799219948554 0
-79F:\GitHub\Projects\Forkify\node_modules\posthtml\node_modules\entities\lib\maps133842799225493723 1
 74F:\GitHub\Projects\Forkify\node_modules\core-js\features\object\has-own.js133842845621439036 0
 81F:\GitHub\Projects\Forkify\node_modules\@swc\helpers\src\_object_spread_props.mjs133842799236211019 0
 58F:\GitHub\Projects\Forkify\node_modules\msgpackr\stream.js133842799226503053 0
@@ -1517,7 +1521,6 @@
 116F:\GitHub\Projects\Forkify\node_modules\msgpackr-extract\node_modules\node-gyp-build-optional-packages\build-test.js133842799221327375 0
 84F:\GitHub\Projects\Forkify\node_modules\lmdb\node_modules\node-addon-api\except.gypi133842799221754359 0
 63F:\GitHub\Projects\Forkify\node_modules\readdirp\esm\index.d.ts133842799658389043 0
-73F:\GitHub\Projects\Forkify\node_modules\core-js\features\instance\find.js133842845615944605 0
 65F:\GitHub\Projects\Forkify\node_modules\@parcel\packager-wasm\lib133842799222411412 1
 64F:\GitHub\Projects\Forkify\node_modules\domutils\lib\querying.js133842799225418223 0
 66F:\GitHub\Projects\Forkify\node_modules\react-refresh\package.json133842799224129833 0
@@ -1774,8 +1777,6 @@
 89F:\GitHub\Projects\Forkify\node_modules\core-js\modules\es.typed-array.find-last-index.js133842845609142622 0
 85F:\GitHub\Projects\Forkify\node_modules\posthtml\node_modules\domutils\lib\index.d.ts133842799226550909 0
 89F:\GitHub\Projects\Forkify\node_modules\posthtml\node_modules\domutils\lib\index.d.ts.map133842799225330432 0
-86F:\GitHub\Projects\Forkify\node_modules\posthtml\node_modules\domutils\lib\legacy.d.ts133842799226683043 0
-65F:\GitHub\Projects\Forkify\node_modules\lmdb\dependencies\lz4\lib133842799231739107 1
 73F:\GitHub\Projects\Forkify\node_modules\@parcel\graph\test\BitSet.test.js133842799224929024 0
 90F:\GitHub\Projects\Forkify\node_modules\posthtml\node_modules\domutils\lib\legacy.d.ts.map133842799225493723 0
 82F:\GitHub\Projects\Forkify\node_modules\core-js\modules\esnext.math.sum-precise.js133842845611656502 0
@@ -2469,7 +2470,7 @@
 76F:\GitHub\Projects\Forkify\node_modules\core-js\stable\array\virtual\join.js133842845628654063 0
 88F:\GitHub\Projects\Forkify\node_modules\@swc\helpers\cjs\_class_apply_descriptor_set.cjs133842799226015153 0
 96F:\GitHub\Projects\Forkify\node_modules\lmdb\dependencies\lmdb-data-v1\libraries\liblmdb\tooltag133842799226402475 0
-49F:\GitHub\Projects\Forkify\dist\index.e37f48ea.js133853880530304413 0
+49F:\GitHub\Projects\Forkify\dist\index.e37f48ea.js133853972987458368 0
 86F:\GitHub\Projects\Forkify\node_modules\core-js\actual\typed-array\to-locale-string.js133842845643237533 0
 72F:\GitHub\Projects\Forkify\node_modules\domutils\lib\manipulation.js.map133842799227929654 0
 72F:\GitHub\Projects\Forkify\node_modules\lmdb\dependencies\lmdb\libraries133842799222069290 1
@@ -2584,6 +2585,7 @@
 66F:\GitHub\Projects\Forkify\node_modules\js-yaml\lib\schema\json.js133842799226338172 0
 76F:\GitHub\Projects\Forkify\node_modules\core-js\es\array\virtual\index-of.js133842845622343132 0
 62F:\GitHub\Projects\Forkify\node_modules\js-yaml\bin\js-yaml.js133842799225545821 0
+58F:\GitHub\Projects\Forkify\node_modules\js-tokens\index.js133842799221218131 0
 57F:\GitHub\Projects\Forkify\node_modules\js-tokens\LICENSE133842799221764450 0
 76F:\GitHub\Projects\Forkify\node_modules\caniuse-lite\data\features\bigint.js133842799229420755 0
 62F:\GitHub\Projects\Forkify\node_modules\js-tokens\package.json133842799219958919 0
@@ -2734,8 +2736,8 @@
 58F:\GitHub\Projects\Forkify\node_modules\htmlnano\index.cjs133842799225195993 0
 71F:\GitHub\Projects\Forkify\node_modules\caniuse-lite\data\regions\BT.js133842799230187791 0
 78F:\GitHub\Projects\Forkify\node_modules\core-js\actual\instance\replace-all.js133842845636190142 0
-78F:\GitHub\Projects\Forkify\node_modules\core-js\stable\array\virtual\splice.js133842845640150530 0
 60F:\GitHub\Projects\Forkify\node_modules\htmlnano\index.d.cts133842799227444941 0
+78F:\GitHub\Projects\Forkify\node_modules\core-js\stable\array\virtual\splice.js133842845640150530 0
 74F:\GitHub\Projects\Forkify\node_modules\@parcel\packager-js\src\helpers.js133842799225418223 0
 71F:\GitHub\Projects\Forkify\node_modules\caniuse-lite\data\regions\SE.js133842799240528427 0
 73F:\GitHub\Projects\Forkify\node_modules\core-js\stable\typed-array\set.js133842845638426516 0
@@ -2974,7 +2976,7 @@
 71F:\GitHub\Projects\Forkify\node_modules\core-js\modules\es.math.sinh.js133842845606808875 0
 68F:\GitHub\Projects\Forkify\node_modules\entities\lib\encode.d.ts.map133842799228222130 0
 66F:\GitHub\Projects\Forkify\node_modules\entities\lib\encode.js.map133842799228336412 0
-49F:\GitHub\Projects\Forkify\dist\logo.726d37a8.png133853880375788390 0
+49F:\GitHub\Projects\Forkify\dist\logo.726d37a8.png133853972752184168 0
 90F:\GitHub\Projects\Forkify\node_modules\@parcel\reporter-dev-server\src\templates\404.html133842799221607285 0
 80F:\GitHub\Projects\Forkify\node_modules\core-js\stable\function\virtual\index.js133842845624748150 0
 68F:\GitHub\Projects\Forkify\node_modules\core-js\actual\math\acosh.js133842845597552604 0
@@ -3306,7 +3308,7 @@
 68F:\GitHub\Projects\Forkify\node_modules\@parcel\cache\lib\FSCache.js133842799220740463 0
 95F:\GitHub\Projects\Forkify\node_modules\@parcel\runtime-js\src\helpers\browser\esm-js-loader.js133842799226205764 0
 71F:\GitHub\Projects\Forkify\node_modules\core-js\stable\string\search.js133842845637329905 0
-50F:\GitHub\Projects\Forkify\dist\icons.dfd7a6db.svg133853880376049173 0
+50F:\GitHub\Projects\Forkify\dist\icons.dfd7a6db.svg133853972752124589 0
 92F:\GitHub\Projects\Forkify\node_modules\caniuse-lite\data\features\css-anchor-positioning.js133842799231391310 0
 76F:\GitHub\Projects\Forkify\node_modules\core-js\actual\instance\match-all.js133842845630664495 0
 80F:\GitHub\Projects\Forkify\node_modules\core-js\features\instance\starts-with.js133842845640467939 0
@@ -5026,7 +5028,6 @@
 72F:\GitHub\Projects\Forkify\node_modules\core-js\full\string\fontcolor.js133842845617218808 0
 68F:\GitHub\Projects\Forkify\node_modules\core-js\full\string\index.js133842845624440156 0
 72F:\GitHub\Projects\Forkify\node_modules\core-js\full\string\pad-start.js133842845633393154 0
-68F:\GitHub\Projects\Forkify\node_modules\core-js\full\string\match.js133842845631077144 0
 74F:\GitHub\Projects\Forkify\node_modules\core-js\full\string\starts-with.js133842845640521426 0
 80F:\GitHub\Projects\Forkify\node_modules\core-js\full\string\virtual\fontcolor.js133842845617239071 0
 69F:\GitHub\Projects\Forkify\node_modules\core-js\full\string\substr.js133842845641582683 0
@@ -5630,6 +5631,7 @@
 82F:\GitHub\Projects\Forkify\node_modules\core-js\features\instance\filter-reject.js133842845614308714 0
 67F:\GitHub\Projects\Forkify\node_modules\core-js\es\function\name.js133842845631783214 0
 84F:\GitHub\Projects\Forkify\node_modules\core-js\features\instance\find-last-index.js133842845615352460 0
+73F:\GitHub\Projects\Forkify\node_modules\core-js\features\instance\find.js133842845615944605 0
 77F:\GitHub\Projects\Forkify\node_modules\@parcel\core\src\SymbolPropagation.js133842799231878570 0
 74F:\GitHub\Projects\Forkify\node_modules\core-js\features\instance\flags.js133842845616396751 0
 72F:\GitHub\Projects\Forkify\node_modules\core-js\actual\array\index-of.js133842845622267674 0
@@ -6171,7 +6173,6 @@
 64F:\GitHub\Projects\Forkify\node_modules\core-js\es\array\with.js133842845649160568 0
 70F:\GitHub\Projects\Forkify\node_modules\core-js\es\array\virtual\at.js133842845599599883 0
 74F:\GitHub\Projects\Forkify\node_modules\core-js\es\array\virtual\concat.js133842845601345624 0
-79F:\GitHub\Projects\Forkify\node_modules\core-js\es\array\virtual\copy-within.js133842845602186302 0
 73F:\GitHub\Projects\Forkify\node_modules\core-js\es\array\virtual\every.js133842845613354715 0
 72F:\GitHub\Projects\Forkify\node_modules\core-js\es\array\virtual\fill.js133842845613957181 0
 74F:\GitHub\Projects\Forkify\node_modules\core-js\es\array\virtual\filter.js133842845614485537 0
@@ -6402,7 +6403,7 @@
 72F:\GitHub\Projects\Forkify\node_modules\core-js\actual\number\epsilon.js133842845605207077 0
 75F:\GitHub\Projects\Forkify\node_modules\core-js\actual\number\is-integer.js133842845626288904 0
 71F:\GitHub\Projects\Forkify\node_modules\core-js\actual\number\is-nan.js133842845626467885 0
-53F:\GitHub\Projects\Forkify\dist\index.e37f48ea.js.map133853880530324404 0
+53F:\GitHub\Projects\Forkify\dist\index.e37f48ea.js.map133853972987483821 0
 75F:\GitHub\Projects\Forkify\node_modules\core-js\actual\array\copy-within.js133842845602122459 0
 80F:\GitHub\Projects\Forkify\node_modules\core-js\actual\number\is-safe-integer.js133842845626725178 0
 76F:\GitHub\Projects\Forkify\node_modules\core-js\actual\number\parse-float.js133842845633467102 0
@@ -6555,7 +6556,7 @@
 80F:\GitHub\Projects\Forkify\node_modules\@swc\helpers\cjs\_async_to_generator.cjs133842799224961533 0
 68F:\GitHub\Projects\Forkify\node_modules\core-js\actual\array\virtual133842845649089313 1
 74F:\GitHub\Projects\Forkify\node_modules\core-js\actual\array\virtual\at.js133842845599520416 0
-50F:\GitHub\Projects\Forkify\dist\index.f7626f62.css133853880375788390 0
+50F:\GitHub\Projects\Forkify\dist\index.f7626f62.css133853972752139668 0
 120F:\GitHub\Projects\Forkify\node_modules\@parcel\source-map\parcel_sourcemap_wasm\dist-node\parcel_sourcemap_wasm_bg.wasm133842799230335624 0
 78F:\GitHub\Projects\Forkify\node_modules\core-js\actual\array\virtual\concat.js133842845601312058 0
 83F:\GitHub\Projects\Forkify\node_modules\core-js\actual\array\virtual\copy-within.js133842845602132451 0
@@ -7383,7 +7384,7 @@
 81F:\GitHub\Projects\Forkify\node_modules\@swc\helpers\esm\_class_name_tdz_error.js133842799231149244 0
 92F:\GitHub\Projects\Forkify\node_modules\@swc\helpers\esm\_class_private_field_destructure.js133842799231164805 0
 91F:\GitHub\Projects\Forkify\node_modules\@swc\helpers\esm\_class_private_field_loose_base.js133842799231233976 0
-52F:\GitHub\Projects\Forkify\dist\favicon.8b2f57bf.png133853880376732679 0
+52F:\GitHub\Projects\Forkify\dist\favicon.8b2f57bf.png133853972752292538 0
 72F:\GitHub\Projects\Forkify\node_modules\@mischnic\json-sourcemap\LICENSE133842799220048811 0
 64F:\GitHub\Projects\Forkify\node_modules\@parcel\transformer-json133842799221944609 1
 90F:\GitHub\Projects\Forkify\node_modules\@swc\helpers\esm\_class_private_field_loose_key.js133842799231259179 0
@@ -8089,9 +8090,9 @@
 55F:\GitHub\Projects\Forkify\node_modules\.bin\semver.ps1133842799250794480 0
 67F:\GitHub\Projects\Forkify\node_modules\.bin\update-browserslist-db133842799250804929 0
 71F:\GitHub\Projects\Forkify\node_modules\.bin\update-browserslist-db.cmd133842799250804929 0
-50F:\GitHub\Projects\Forkify\dist\icons.21bad73c.svg133853880375984109 0
+50F:\GitHub\Projects\Forkify\dist\icons.21bad73c.svg133853972752124589 0
 53F:\GitHub\Projects\Forkify\dist\index.62406edb.js.map133842799686884039 0
-54F:\GitHub\Projects\Forkify\dist\index.f7626f62.css.map133853880375844206 0
-42F:\GitHub\Projects\Forkify\dist\index.html133853880375788390 0
+54F:\GitHub\Projects\Forkify\dist\index.f7626f62.css.map133853972752184168 0
+42F:\GitHub\Projects\Forkify\dist\index.html133853972752114573 0
 75F:\GitHub\Projects\Forkify\dev-data\flowCharts\forkify-flowchart-part-2.png132886955210000000 0
 43F:\GitHub\Projects\Forkify\.idea\codeStyles133852157172407302 1
