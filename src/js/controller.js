@@ -45,8 +45,8 @@ const controlSearchResults = async function () {
     if (!query) return;
 
     await model.loadSearchResults(query);
-    ResultView.render(model.getSearchResultsPage(3));
 
+    ResultView.render(model.getSearchResultsPage(3));
     PaginationView.render(model.state.search);
   } catch (error) {
     console.error('Controller:', error);
@@ -93,7 +93,12 @@ const controlAddRecipe = async function (newRecipe) {
 
     AddRecipeView.renderMessage();
 
-    setTimeout(function () {
+    BookmarkView.render(model.state.bookmarks);
+
+    window.history.pushState(null, '', `#${model.state.recipe.id}`);
+    // window.history.back();
+
+    window.setTimeout(function () {
       AddRecipeView.toggleWindow();
     }, MODAL_CLOSE_SEC * 1000);
   } catch (error) {
