@@ -1,6 +1,8 @@
 import View from './View';
 
 class AddRecipeView extends View {
+  _errorMessage = 'Wrong ingredient format! Please use the correct format :)';
+  _message = `Recipe sucessfully uploaded`;
   _parentElement = document.querySelector('.upload');
 
   _window = document.querySelector('.add-recipe-window');
