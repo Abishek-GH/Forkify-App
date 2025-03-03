@@ -1,7 +1,7 @@
 import PreviewView from './previewView';
 import View from './View';
 
-class ResultsView extends View {
+class ResultView extends View {
   _parentElement = document.querySelector('.results');
   _errorMessage = `No recipes found for your query. Please try again!`;
   _message = '';
@@ -11,4 +11,4 @@ class ResultsView extends View {
   }
 }
 
-export default new ResultsView();
+export default new ResultView();
