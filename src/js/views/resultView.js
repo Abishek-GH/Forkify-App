@@ -7,7 +7,6 @@ class ResultView extends View {
   _message = '';
 
   _generateMarkup() {
-    console.log('This Data', this._data);
     return this._data.map(result => PreviewView.render(result, false)).join('');
   }
 }
