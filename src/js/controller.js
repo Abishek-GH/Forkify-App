@@ -1,5 +1,5 @@
-import 'regenerator-runtime/runtime';
-import 'core-js/stable';
+// import 'regenerator-runtime/runtime';
+// import 'core-js/stable';
 import * as model from './model';
 import RecipeView from './views/recipeView';
 import SearchView from './views/searchView';
@@ -13,9 +13,9 @@ import { MODAL_CLOSE_SEC } from './config';
 
 ///////////////////////////////////////
 
-if (module.hot) {
-  module.hot.accept();
-}
+// if (module.hot) {
+//   module.hot.accept();
+// }
 
 // Show Recipe
 const controlRecipes = async function () {
