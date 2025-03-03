@@ -1,5 +1,5 @@
 import icons from 'url:./../../img/icons.svg';
-import { Fraction } from 'fractional';
+import fracty from 'fracty';
 import View from './View';
 
 class RecipeView extends View {
@@ -9,7 +9,7 @@ class RecipeView extends View {
 
   addHandlerRender(handler) {
     // Add Event Listeners to Multiple Events
-    ['hashchange', 'load'].forEach(element =>
+    ['hashchange', 'load'].forEach((element) =>
       window.addEventListener(element, handler)
     );
     // window.addEventListener('hashchange', controlRecipes);
@@ -106,7 +106,7 @@ class RecipeView extends View {
           <ul class="recipe__ingredient-list">
 
           ${this._data.ingredients
-            .map(ing => this._generateIngredientMarkup(ing))
+            .map((ing) => this._generateIngredientMarkup(ing))
             .join('')}
           </ul>
         </div>
@@ -140,7 +140,7 @@ class RecipeView extends View {
                 <use href="${icons}#icon-check"></use>
               </svg>
               <div class="recipe__quantity">${
-                ing.quantity ? new Fraction(ing.quantity).toString() : ''
+                ing.quantity ? fracty(ing.quantity).toString() : ''
               }</div>
               <div class="recipe__description">
                 <span class="recipe__unit">${ing.unit}</span>
